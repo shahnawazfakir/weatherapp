@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'montserrat', sans-serif;
+  background-image: url('bg.jpeg');
+  background-size: cover;
+  background-position: top center;
+}
+
+.app-wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 15px 15px;
+}
+
+header input {
+  width: 100%;
+  max-width: 280px;
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 16px 0px 16px 0px;
+  border-bottom: 3.5px solid rgb(48, 209, 88);
+  color: black;
+  font-size: 20px;
+  font-weight: 300;
+  transition: 0.2s ease-out;
+}
+
+header input:focus {
+  background-color: transparent;
+  color: white;
+}
+
+main {
+  flex: 1 1 100%;
+  padding: 25px 25px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  
+}
+
+.location .city {
+  color: #FFF;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.location .date {
+  color: #FFF;
+  font-size: 20px;
+  /* margin-bottom: -5px; */
+  
+}
+
+.current .temp {
+  color: #FFF;
+  font-size: 90px;
+  font-weight: 900;
+  margin: 30px 0px;
+  text-shadow: 2px 10px rgba(0, 0, 0, 0.6);
+  margin-bottom: -10px;
+}
+
+.current .temp span {
+  font-weight: 500;
+}
+
+.current .weather {
+  color: #FFF;
+  font-size: 35px;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 25px;
+  text-shadow: 0px 3px rgba(0, 0, 0, 0.4);
+}
+
+.current .hi-low {
+  color: #FFF;
+  font-size: 24px;
+  font-weight: 500;
+  text-shadow: 0px 4px rgba(0, 0, 0, 0.4);
+}
+
+.current .weather-icon{
+  background-color: transparent;
+}
+
+#lowerleft
+{
+  height: 50px;
+  color: #FFF;
+  font-size: 24px;
+  font-weight: 400;
+  text-shadow: 0px 4px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: 0; bottom: 0;
+}
+
+#lowerleft:hover{
+  color: rgb(48, 209, 88);
+}
+
+.btn-danger {
+  color: #fff;
+  background-color:  rgb(48, 209, 88);
+  border-color:  rgb(48, 209, 88);
+}
+
+.btn {
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .400rem .400rem .400rem .400rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  
+}
+
+.btn:hover {
+  border-radius: 1em;
+}

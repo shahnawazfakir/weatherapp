@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Weather</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="app-wrap">
+    <header>
+      <input type="text" autocomplete="off" class="search-box" placeholder="Search for a city..." />
+      <div class="input-group-append">
+        <button id="search-button" type="button" class="btn btn-danger">Search</button>
+    </div>
+    </header>
+    <main>
+      <section class="location">
+        <div class="city"></div>
+        <div class="date"></div>
+      </section>
+      <div class="current">
+        <div class="temp"></div>
+        <div class="weather-icon">
+          <img src="loading.gif" alt="icons/unknown.png">
+        </div>
+        <div class="weather"></div>
+        <div class="hi-low"></div>
+      </div>
+    </main>
+    <div id="lowerleft">
+        By Shahnawaz :)
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
