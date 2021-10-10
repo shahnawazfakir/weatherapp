@@ -9,6 +9,7 @@ body {
   background-image: url('bg.jpeg');
   background-size: cover;
   background-position: top center;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
 .app-wrap {
