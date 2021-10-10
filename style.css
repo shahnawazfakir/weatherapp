@@ -9,6 +9,7 @@ body {
   background-image: url('bg.jpeg');
   background-size: cover;
   background-position: top center;
+  background-color: transparent;
 }
 
 .app-wrap {
