@@ -42,6 +42,10 @@ header input {
   transition: 0.2s ease-out;
 }
 
+input::placeholder{
+  color: black;
+}
+
 header input:focus {
   background-color: transparent;
   color: white;
@@ -54,7 +58,6 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  
 }
 
 .location .city {
@@ -68,7 +71,6 @@ main {
   color: #FFF;
   font-size: 20px;
   /* margin-bottom: -5px; */
-  
 }
 
 .current .temp {
@@ -137,7 +139,6 @@ main {
   font-size: 1rem;
   line-height: 1.5;
   border-radius: .25rem;
-  
 }
 
 .btn:hover {
