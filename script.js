@@ -70,7 +70,6 @@ window.addEventListener("load" ,()=> {
     
     const iconId = weather.weather[0].icon;
     let iconElement = document.querySelector('.weather-icon');
-    // iconElement.innerHTML = `<img src="icons/${iconId}.png"/>`;
     iconElement.innerHTML = `<img src="icons/${iconId}.png"/>`;
   
     let weather_el = document.querySelector('.current .weather');
