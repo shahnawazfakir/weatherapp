@@ -1,5 +1,5 @@
 const api = {
-  key: "83e8cb8142cc1f0a9d79b868cbaee6cf", // example key, you can make your own free keyat openweather.org
+  key: "83e8cb8142cc1f0a9d79b868cbaee6cf", // example key, you can make your own free key at openweatherapi
   base: "https://api.openweathermap.org/data/2.5/"
 }
 
@@ -70,6 +70,7 @@ window.addEventListener("load" ,()=> {
     
     const iconId = weather.weather[0].icon;
     let iconElement = document.querySelector('.weather-icon');
+    // iconElement.innerHTML = `<img src="icons/${iconId}.png"/>`;
     iconElement.innerHTML = `<img src="icons/${iconId}.png"/>`;
   
     let weather_el = document.querySelector('.current .weather');
