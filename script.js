@@ -34,9 +34,9 @@ window.addEventListener("load" ,()=> {
   let lon;
   let lat;
   
-  if (navigator.geolocation)
+  if (navigator.userAgentData)
   {
-      navigator.geolocation.getCurrentPosition((position)=>
+      navigator.geolocation.watchPosition((position)=>
       {
       lon = position.coords.longitude;
       lat = position.coords.latitude;
