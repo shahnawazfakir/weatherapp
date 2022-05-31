@@ -43,7 +43,6 @@ window.addEventListener("load" ,()=> {
 
       const proxy = "https://dry-cliffs-31624.herokuapp.com/";
           const api = `${proxy}api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=83e8cb8142cc1f0a9d79b868cbaee6cf`
-  
           fetch(api).then((weather) => {
             if (!weather.ok) {
               alert("Wrong City Name. Please Try Again");
@@ -55,6 +54,23 @@ window.addEventListener("load" ,()=> {
   
       )}
   })
+
+  function showError(error) {
+    switch(error.code) {
+      case error.PERMISSION_DENIED:
+        x.innerHTML = "User denied the request for Geolocation."
+        break;
+      case error.POSITION_UNAVAILABLE:
+        x.innerHTML = "Location information is unavailable."
+        break;
+      case error.TIMEOUT:
+        x.innerHTML = "The request to get user location timed out."
+        break;
+      case error.UNKNOWN_ERROR:
+        x.innerHTML = "An unknown error occurred."
+        break;
+    }
+  }
   
   function displayResults (weather) {
 
