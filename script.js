@@ -29,49 +29,31 @@ function getResults (query) {
     }).then(displayResults);
 }
 
-window.addEventListener("load" ,()=> {
+window.addEventListener("load", () => {
 
   let lon;
   let lat;
-  
+
   if (navigator.userAgentData)
   {
-      navigator.geolocation.watchPosition((position)=>
-      {
+    navigator.geolocation.getCurrentPosition((position)=>
+    {
       lon = position.coords.longitude;
       lat = position.coords.latitude;
 
       const proxy = "https://dry-cliffs-31624.herokuapp.com/";
-          const api = `${proxy}api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=83e8cb8142cc1f0a9d79b868cbaee6cf`
-          fetch(api).then((weather) => {
-            if (!weather.ok) {
-              alert("Wrong City Name. Please Try Again");
-              throw new Error("Wrong City Name. Please Try Again");
-            }
-            return weather.json();
-          }).then(displayResults);
-  }
-  
+      const api = `${proxy}api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=83e8cb8142cc1f0a9d79b868cbaee6cf`
+        fetch(api).then((weather) => {
+          if (!weather.ok) {
+            alert("Wrong City Name. Please Try Again");
+            throw new Error("Wrong City Name. Please Try Again");
+          }
+          return weather.json();
+        }).then(displayResults);
+    }
       )}
   })
 
-  function showError(error) {
-    switch(error.code) {
-      case error.PERMISSION_DENIED:
-        x.innerHTML = "User denied the request for Geolocation."
-        break;
-      case error.POSITION_UNAVAILABLE:
-        x.innerHTML = "Location information is unavailable."
-        break;
-      case error.TIMEOUT:
-        x.innerHTML = "The request to get user location timed out."
-        break;
-      case error.UNKNOWN_ERROR:
-        x.innerHTML = "An unknown error occurred."
-        break;
-    }
-  }
-  
   function displayResults (weather) {
 
     let city = document.querySelector('.location .city');
@@ -94,7 +76,6 @@ window.addEventListener("load" ,()=> {
     let hilow = document.querySelector('.hi-low');
     hilow.innerText = `H: ${Math.round(weather.main.temp_max)}°F / L: ${Math.round(weather.main.temp_min)}°F`;
   }
-
 
   function dateBuilder (d) {
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
