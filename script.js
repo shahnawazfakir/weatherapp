@@ -1,7 +1,5 @@
-var api_key = config.API_KEY;
-
 const api = {
-  key: api_key,
+  key: API_KEY,
   base: "https://api.openweathermap.org/data/2.5/"
 }
 
