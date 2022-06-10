@@ -1,5 +1,7 @@
+var api_key = config.API_KEY;
+
 const api = {
-  key: "83e8cb8142cc1f0a9d79b868cbaee6cf", // example key, you can make your own free key at openweatherapi
+  key: api_key,
   base: "https://api.openweathermap.org/data/2.5/"
 }
 
