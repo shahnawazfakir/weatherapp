@@ -1,7 +1,7 @@
 import { key } from './module.js';
 
 const api = {
-  key: key(), // example key, you can make your own free key at openweatherapi
+  key: key(),
   base: "https://api.openweathermap.org/data/2.5/"
 }
 
