@@ -79,7 +79,7 @@ window.addEventListener("load", () => {
     
   }
   
-  import { key } from './icons_black/icons/loading/module.js';
+  import { key } from './icons/module.js';
 
   function dateBuilder (d) {
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
