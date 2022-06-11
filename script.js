@@ -1,5 +1,3 @@
-import { key } from './module.js';
-
 const api = {
   key: key(),
   base: "https://api.openweathermap.org/data/2.5/"
@@ -57,6 +55,7 @@ window.addEventListener("load", () => {
   })
 
   function displayResults (weather) {
+    
 
     let city = document.querySelector('.location .city');
     city.innerText = `${weather.name}, ${weather.sys.country}`;
@@ -77,7 +76,10 @@ window.addEventListener("load", () => {
   
     let hilow = document.querySelector('.hi-low');
     hilow.innerText = `H: ${Math.round(weather.main.temp_max)}°F / L: ${Math.round(weather.main.temp_min)}°F`;
+    
   }
+  
+  import { key } from './icons_black/icons/loading/module.js';
 
   function dateBuilder (d) {
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
