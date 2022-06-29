@@ -75,7 +75,7 @@ window.addEventListener("load", () => {
     weather_el.innerText = weather.weather[0].main;
   
     let hilow = document.querySelector('.hi-low');
-    hilow.innerText = `H: ${Math.round(weather.main.temp_max)}°F / L: ${Math.round(weather.main.temp_min)}°F`;
+    hilow.innerText = `High: ${Math.round(weather.main.temp_max)}°F / Low: ${Math.round(weather.main.temp_min)}°F`;
     
   }
   
