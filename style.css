@@ -122,7 +122,7 @@ main {
   color: rgb(48, 209, 88);
 }
 
-/* .btn-danger {
+.btn-danger {
   color: #fff;
   background-color:  rgb(48, 209, 88);
   border-color:  rgb(48, 209, 88);
@@ -144,10 +144,10 @@ main {
 
 .btn:hover {
   border-radius: 1em;
-} */
+}
 
 
-.btn {
+/* .btn {
   padding: 0.9em 1.6em;
   border: none;
   outline: none;
@@ -215,4 +215,4 @@ main {
   100% {
     background-position: 0 0;
   }
-}
+} */
