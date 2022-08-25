@@ -158,7 +158,7 @@ main {
 }
 
 .btn:active {
-  opacity: .6;
+  opacity: .5;
 }
 
 /* .btn-danger {
