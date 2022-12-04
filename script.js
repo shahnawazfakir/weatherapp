@@ -30,7 +30,6 @@ function getResults (query) {
 }
 
 window.addEventListener("load", () => {
-
   let lon;
   let lat;
 
@@ -41,8 +40,7 @@ window.addEventListener("load", () => {
       lon = position.coords.longitude;
       lat = position.coords.latitude;
 
-      const proxy = "https://dry-cliffs-31624.herokuapp.com/";
-      const api = `${proxy}api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=83e8cb8142cc1f0a9d79b868cbaee6cf`
+      const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=83e8cb8142cc1f0a9d79b868cbaee6cf`
         fetch(api).then((weather) => {
           if (!weather.ok) {
             alert("Wrong City Name. Please Try Again");
@@ -50,13 +48,14 @@ window.addEventListener("load", () => {
           }
           return weather.json();
         }).then(displayResults);
-    }
-      )}
+    })
+    } else {
+      alert("Geolocation is not supported by this device");
+  }
   })
 
   function displayResults (weather) {
     
-
     let city = document.querySelector('.location .city');
     city.innerText = `${weather.name}, ${weather.sys.country}`;
   
@@ -76,7 +75,6 @@ window.addEventListener("load", () => {
   
     let hilow = document.querySelector('.hi-low');
     hilow.innerText = `High: ${Math.round(weather.main.temp_max)}°F / Low: ${Math.round(weather.main.temp_min)}°F`;
-    
   }
   
   import { key } from './icons/module.js';
