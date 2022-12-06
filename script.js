@@ -29,7 +29,9 @@ function getResults (query) {
     }).then(displayResults);
 }
 
-window.addEventListener("load", () => {
+let locationBtn = document.getElementById('location-button')
+
+locationBtn.addEventListener("click", () => {
   let lon;
   let lat;
 
@@ -90,5 +92,3 @@ window.addEventListener("load", () => {
   
     return `${day} ${date} ${month} ${year}`;
   }
-
-  

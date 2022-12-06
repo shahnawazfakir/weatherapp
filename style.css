@@ -17,7 +17,6 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
-  
 }
 
 header {
@@ -70,7 +69,6 @@ main {
 .location .date {
   color: #FFF;
   font-size: 20px;
-  /* margin-bottom: -5px; */
 }
 
 .current .temp {
@@ -111,18 +109,15 @@ main {
 {
   height: 50px;
   color: #FFF;
-  font-size: 24px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-left: 15px;
+  font-size: 22px;
   font-weight: 400;
-  text-shadow: 0px 4px rgba(0, 0, 0, 0.4);
   position: relative;
   left: 0; bottom: 0;
 }
 
-#lowerleft:hover{
-  color: rgb(48, 209, 88);
-}
-
-.btn {
+.search-btn {
   background:rgb(48, 209, 88);
   margin-left: 10px;
   margin-bottom: 2px;
@@ -133,56 +128,95 @@ main {
   color: #FFFFFF;
   cursor: pointer;
   display: inline-block;
-  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
   font-size: 16px;
   font-weight: 800;
   line-height: 16px;
   min-height: 40px;
   outline: 0;
   padding: .650rem 1rem;
-  text-align: center;
-  text-rendering: geometricprecision;
-  text-transform: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
-  
 }
 
-.btn:hover,
-.btn:active {
+.search-btn:hover,
+.search-btn:active {
   background-color: initial;
   background-position: 0 0;
   color: rgb(48, 209, 88);
 }
 
-.btn:active {
+.search-btn:active {
   opacity: .5;
 }
 
-/* button style 1
-
-.btn-danger {
-  color: #fff;
-  background-color:  rgb(48, 209, 88);
-  border-color:  rgb(48, 209, 88);
-}
-
-.btn {
+.location-btn {
+  background:rgb(48, 209, 88);
+  margin-top: 20px;
+  border: 2px solid rgb(48, 209, 88);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
   display: inline-block;
-  margin-left: 10px;
-  font-weight: 400;
-  text-align: center;
-  vertical-align: middle;
-  user-select: none;
-  border: 1px solid transparent;
-  padding: .400rem .400rem .400rem .400rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: .25rem;
+  font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 16px;
+  padding: 0.7rem;
+  transition: all 0.5s;
+  cursor: pointer;
 }
 
-.btn:hover {
-  border-radius: 1em;
-} */
+.location-btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.location-btn span:after {
+  content: '📍';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.location-btn:hover span {
+  padding-right: 25px;
+}
+
+.location-btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.self_page {
+  text-decoration:none;
+  color:inherit;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #FFFFFF;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(48, 209, 88);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
