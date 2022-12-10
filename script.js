@@ -78,8 +78,8 @@ locationBtn.addEventListener("click", () => {
     let hilow = document.querySelector('.hi-low');
     hilow.innerText = `High: ${Math.round(weather.main.temp_max)}°F / Low: ${Math.round(weather.main.temp_min)}°F`;
   }
-  
-  import { key } from './icons/module.js';
+
+  import { key } from './icons_dark/icons.js';
 
   function dateBuilder (d) {
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];

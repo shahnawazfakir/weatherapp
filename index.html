@@ -24,12 +24,21 @@
       <div class="current">
         <div class="temp"></div>
         <div class="weather-icon">
-          <img src="icons/unknown.png" alt="icons/unknown.png">
+          <img src="icons/unknown.png" id ="load">
         </div>
         <div class="weather"></div>
         <div class="hi-low"></div>
-        <button id="location-button" type="button" class="location-btn"><span>Locate Me</span></button>
+        <button id="location-button" class="location-btn" onclick="loading('loading/mario.gif')">
+          <span>Locate Me</span>
+        </button>
       </div>
+      <script>
+        function loading(name) {
+          if (image = document.querySelector("#load")) {
+            image.setAttribute("src", name)
+          }
+        }
+      </script>
     </main>
     <div id="lowerleft" >
       <a href="https://shahnawazfakir.github.io/" class="self_page" >
