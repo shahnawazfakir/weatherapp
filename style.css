@@ -41,7 +41,7 @@ header input {
   transition: 0.2s ease-out;
 }
 
-input::placeholder{
+input::placeholder {
   color: black;
 }
 
@@ -100,13 +100,12 @@ main {
   text-shadow: 0px 4px rgba(0, 0, 0, 0.4);
 }
 
-.current .weather-icon{
+.current .weather-icon {
   background-color: transparent;
   margin-bottom: 5px;
 }
 
-#lowerleft
-{
+#lowerleft {
   height: 50px;
   color: #FFF;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -114,11 +113,12 @@ main {
   font-size: 22px;
   font-weight: 400;
   position: relative;
-  left: 0; bottom: 0;
+  left: 0;
+  bottom: 0;
 }
 
 .search-btn {
-  background:rgb(48, 209, 88);
+  background: rgb(48, 209, 88);
   margin-left: 10px;
   margin-bottom: 2px;
   border: 2px solid rgb(48, 209, 88);
@@ -149,7 +149,7 @@ main {
 }
 
 .location-btn {
-  background:rgb(48, 209, 88);
+  background: rgb(48, 209, 88);
   margin-top: 20px;
   border: 2px solid rgb(48, 209, 88);
   border-radius: 6px;
@@ -193,8 +193,8 @@ main {
 }
 
 .self_page {
-  text-decoration:none;
-  color:inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 .hover-underline-animation {
